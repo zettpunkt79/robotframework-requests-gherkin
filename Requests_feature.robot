@@ -9,16 +9,16 @@ https://github.com/bulkan/robotframework-requests/blob/master/tests/testcase.rob
 *** Test Cases ***
 Scenario: I can send a get request
     [Tags]    get
-    I send a GET request to the base URL
+    Given I send a GET request to the base URL
     Then the repsonse code equals "200"
 
 Scenario: I can send a get request with URL parameters
     [Tags]    get
-    I send a GET request with URL parameters
+    Given I send a GET request with URL parameters
     Then the repsonse code equals "200"
-    and the repsonse body contains the parameters
+    And the repsonse body contains the parameters
 
 Scneario: I can send a get request with authentication
     [Tags]    get
-    I send a GET request with authentication
-    I am authenticated
+    Given I send a GET request with authentication
+    Then I am authenticated
